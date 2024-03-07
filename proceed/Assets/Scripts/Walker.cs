@@ -1,4 +1,5 @@
 using GridSystem;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -18,6 +19,8 @@ public class Walker
 
     public void Move()
     {
+        steps++;
+        if
         Vector2 selectedDirection = m_directions[Random.Range(0, m_directions.Length)];
         if (currentCell.GetNeighbour(selectedDirection) != null)
         {
@@ -25,7 +28,7 @@ public class Walker
             currentCell.cellDebugColour = Color.black;
             position = currentCell.position;
         }
+        Console.WriteLine("Boing");
     }
-
-
+    
 }
